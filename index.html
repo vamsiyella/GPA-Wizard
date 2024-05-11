@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <body>
+      <!--Button for Tutorial Function & Header --->
+    <div class="headertext" align="center">GPA Wizard</div>
+    <div class="headertext2" align="center"> &nbsp &nbsp &nbsp &nbsp &nbsp Calculate your GPA in seconds <span style="float : right;">
+        <button id="switchbackground" align="right">Tutorial</button>
+      </span>
+      <div>
+
+        <br>
+        <br>
+          <!--GPA Result --->
+        <div>
+            &nbsp<div class=gpa id="gradepointaverage" font="bold" align="center">
+          <span style="font-size:18px"> GPA= 4</div> <span style="float : right;">
+              <button id="savedata" align="right">Save</button>
+            </span>
+              
+        </div>
+        <p align="right">
+          <button id="getdata" align="right">Load</button>
+        </p>
+        <!--Current GPA Dropdown --->
+        <details>
+          <summary>Add to your current GPA!</summary>
+          <label for "current gpa">Add Current GPA</label>
+          <input type="text" id="current gpa" name="currentgpa" value=NotAdded>
+          <label for="Current Number of Courses"> Number of courses taken:</label>
+          <input type="text" id="number of courses" name="coursenumber" value=NotAdded>
+        </details>
+        <!--User Instructions --->
+        <div class="tooltip">Instructions! <span class="tooltiptext">To use the GPA calculator, fill in the table with the course name, grade, and select the course type (Regular, AP/IB, or Honors). Use the "Add Row" button to add more courses. Click "Calculate GPA" to compute the weighted GPA, and "Delete Row" to remove a course. Save and retrieve data with the "Save Data" and "Get Data" buttons. The "Tutorial" button navigates to a different HTML file that tells you how to use the extension. Finally, "Generate Report" creates a detailed course report in a new window. Follow these steps for effective use. Scroll down for buttons! </span>
+        </div>
+        <!--Table --->
+        <table id="Semester 1" style="width: 500px;">
+          <!-- Header Row --->
+          <tr id="heading">
+            <td>Course Name </td>
+            <td>Current Course Average </td>
+            <td>Course Type </td>
+            <td>Weighted GPA Value</td>
+          </tr>
+          <!--Course Row 1 (Standard) --->
+          <tr id="courserow1">
+            <!--Course Name 1 --->
+            <td>
+              <input type="text" id="coursename1" value="Course 1">
+            </td>
+            <!--Course Average 1 --->
+            <td>
+              <input type="text" id="g1" name="grade" value=100.0>
+            </td>
+            <!--Course Type 1 --->
+            <td>
+              <label for="coursetype1"></label>
+              <select class="coursetype1" name="coursetype" id="coursetype1">
+                <option value="Regular">Regular</option>
+                <option value="AP/IB">AP/IB</option>
+                <option value="Honors">Honors</option>
+              </select>
+            </td>
+            <!--Weighted Grade 1 --->
+            <td>
+              <input type="text" id="weightedvalue1" name="weightedgrade" value=4.0>
+            </td>
+          </tr>
+          <!--Course Row 2 (Standard) --->
+          <tr id="courserow2">
+            <!--Course Name 1 --->
+            <td>
+              <input type="text" id="coursename2" value="Course 2">
+            </td>
+            <!--Course Average 2 --->
+            <td>
+              <input type="text" id="g2" name="grade" value=100.0>
+            </td>
+            <!--Course Type 2 --->
+            <td>
+              <label for="coursetype2"></label>
+              <select class="coursetype2" name="coursetype" id="coursetype2">
+                <option value="Regular">Regular</option>
+                <option value="AP/IB">AP/IB</option>
+                <option value="Honors">Honors</option>
+              </select>
+            </td>
+            <!--Weighted Grade 2 --->
+            <td>
+              <input type="text" id="weightedvalue2" name="weightedgrade" value=4.0>
+            </td>
+          </tr>
+          <!--Course Row 1 (Standard) --->
+          <tr id="courserow3">
+            <!--Course Name 3 --->
+            <td>
+              <input type="text" id="coursename3" value="Course 3">
+            </td>
+            <!--Course Average 3 --->
+            <td>
+              <input type="text" id="g3" name="grade" value=100.0>
+            </td>
+            <!--Course Type 3 --->
+            <td>
+              <label for="coursetype3"></label>
+              <select class="coursetype3" name="coursetype" id="coursetype3">
+                <option value="Regular">Regular</option>
+                <option value="AP/IB">AP/IB</option>
+                <option value="Honors">Honors</option>
+              </select>
+            </td>
+            <!--Weighted Grade 3 --->
+            <td>
+              <input type="text" id="weightedvalue3" name="weightedgrade" value=4.0>
+            </td>
+          </tr>
+        </table>
+        <p align="left">
+          <button id="addrowbutton">Add Row</button>
+          <button id="deleterowbutton">Delete Row</button>
+        </p>
+        <p align="right">
+          <button id="calcgpabutton">Weighted GPA</button>
+          <button id="calcregulargpa">Unweighted GPA</button>
+        </p>
+        <p align="center">
+          <button id="reportButton">REPORT</button>
+        </p>
+        <script src="background.js"></script>
+  </body>

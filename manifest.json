@@ -1,0 +1,24 @@
+{
+    "name": "FBLA project",
+    "version": "1.0.0",
+    "description": "GPA calculator",        
+    "manifest_version": 3,
+    "author": "Vamsi Yella",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "GPA"
+    },
+   "content_scripts": [
+   {
+     "matches": ["https://*.example.com/*"],
+     "css": ["styles.css"],
+     "js": ["background.js"]
+   }
+   ],
+   "permissions": [
+    "storage",
+    "tabs"
+    
+  ]
+
+}
